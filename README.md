@@ -16,8 +16,7 @@ https://uk.javascript.info/logical-operators
 
 # день 5:
 https://uk.javascript.info/function-basics
-практика - калькулятор, його ти вже зробив) 
-але теорію все одно перечитай 
+
 
 # день 6:
 https://uk.javascript.info/while-for
