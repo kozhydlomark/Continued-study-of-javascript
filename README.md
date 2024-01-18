@@ -32,29 +32,39 @@
 
 # день 3:
 
-https://uk.javascript.info/comparison
+### Основи git день 1
+https://oil-slug-2e1.notion.site/9aa41a3ea22e4f7889446edf7e218ba3
 
 # день 4:
+
+### Основи git день 2
+https://oil-slug-2e1.notion.site/2e00ce915a864059b947ac81186274c3
+
+# день 5:
+
+https://uk.javascript.info/comparison
+
+# день 6:
 
 https://uk.javascript.info/ifelse
 https://uk.javascript.info/logical-operators
 
-# день 5:
+# день 7:
 
 https://uk.javascript.info/function-basics
 
-# день 6:
+# день 8:
 
 https://uk.javascript.info/while-for
 
-# день 7:
+# день 9:
 
 https://uk.javascript.info/object
 
-# день 8:
+# день 10:
 
 https://uk.javascript.info/object-copy
 
-# день 9:
+# день 11:
 
-Практика ToDo (дивись наступне повідомлення)
+Практика ToDo (Телеграм прикриплені)
