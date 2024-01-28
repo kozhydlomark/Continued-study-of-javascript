@@ -4,47 +4,86 @@ const list = {
   "написати пост": "Необхідно виконати",
 };
 
-function changeStatus(taskName, newStatus) {
-  if (list.hasOwnProperty(taskName)) {
-    list[taskName] = newStatus;
-    console.log(`Статус  "${taskName}"  змінено на ${newStatus}`);
+function changeStatus(task, status) {
+  if (list.hasOwnProperty(task)) {
+    list[task] = status;
+    console.log(`Статус задачі "${task}" змінено на "${status}"`);
   } else {
-    console.log(`Завдання "${taskName}"  не знайдено`);
+    console.log(`Задачу "${task}" не знайдено`);
   }
 }
 
-function addTask(taskName) {
-  if (!list.hasOwnProperty(taskName)) {
-    list[taskName] = "Необхідно виконати";
-    console.log(`Завдання "${taskName}" додано`);
+function addTask(task) {
+  if (!list.hasOwnProperty(task)) {
+    list[task] = "To Do";
+    console.log(`Додано нову задачу "${task}"`);
   } else {
-    console.log(`Завдання "${taskName}" додано`);
+    console.log(`Задача "${task}" вже існує`);
   }
 }
 
-function deleteTask(taskName) {
-  if (list.hasOwnProperty(taskName)) {
-    delete list[taskName];
-    console.log(`Завдання "${taskName}" Завдання`);
+function deleteTask(task) {
+  if (list.hasOwnProperty(task)) {
+    delete list[task];
+    console.log(`Задачу "${task}" видалено`);
   } else {
-    console.log(`Завдання "${taskName}"  не знайдено`);
+    console.log(`Задачу "${task}" не знайдено`);
   }
 }
 
 function showList() {
-  if (Object.keys(list).length === 0) {
-    console.log("Нічого немає у списку");
-    return;
+  const todoTasks = [];
+  const inProgressTasks = [];
+  const doneTasks = [];
+
+  for (const [task, status] of Object.entries(list)) {
+    switch (status) {
+      case "To Do":
+        todoTasks.push(task);
+        break;
+      case "In Progress":
+        inProgressTasks.push(task);
+        break;
+      case "Done":
+        doneTasks.push(task);
+        break;
+      default:
+        break;
+    }
   }
 
-  for (const taskName in list) {
-    console.log(`${taskName}: ${list[taskName]}`);
+  console.log("\nTo do:");
+  for (const task of todoTasks) {
+    console.log(`"${task}"`);
+  }
+
+  console.log("\nIn Progress:");
+  for (const task of inProgressTasks) {
+    console.log(`"${task}"`);
+  }
+
+  console.log("\nDone:");
+  for (const task of doneTasks) {
+    console.log(`"${task}"`);
+  }
+
+  if (
+    todoTasks.length === 0 &&
+    inProgressTasks.length === 0 &&
+    doneTasks.length === 0
+  ) {
+    console.log("Нічого не виконано");
   }
 }
 
-addTask("купити продукти");
-addTask("прибрати вдома");
-changeStatus("прибрати вдома", "В процесі");
+addTask("йти за продуктами");
+changeStatus("написати пост", "Done");
+deleteTask("зробити ліжко");
+changeStatus("неіснуюче завдання", "To Do");
+
+addTask("прочитати книгу");
+addTask("вивчити новий навик");
+addTask("вправи на 30 хвилин");
+
+
 showList();
-
-
