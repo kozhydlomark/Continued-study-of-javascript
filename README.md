@@ -1,70 +1,143 @@
-# день 1:
+# Частина перша
 
-- https://uk.javascript.info/variables
-- https://uk.javascript.info/types
+<details><summary>основи JavaScript та Git</summary>
 
-# день 2:
+## День 1:
 
-Прочитати теорію та виконати завдання у кінці статей:
+- [JavaScript Variables](https://uk.javascript.info/variables)
+- [JavaScript Types](https://uk.javascript.info/types)
 
-- https://uk.javascript.info/type-conversions
-- https://uk.javascript.info/operators
+## День 2:
 
-Написати кілька інструкцій із даними різних типів.
-<br/>
-Наприклад, складіть рядки, рядок з числом, число з булевим значенням і так далі
+Прочитайте теорію та виконайте завдання у кінці статей:
+
+- [Type Conversions](https://uk.javascript.info/type-conversions)
+- [Operators](https://uk.javascript.info/operators)
+
+Напишіть кілька інструкцій із різних типів, наприклад, рядки, рядок з числом, число з булевим значенням і так далі.
 
 <details><summary>Інструкції</summary>
 
-Саме час перейти до чогось, що більше одного рядка і познайомитися з інструкціями в коді, розібратися зі структурою, виконати перший код
+Саме час перейти до чогось, що більше одного рядка і познайомитися з інструкціями в коді, розібратися зі структурою, виконати перший код.
 
-Інструкції - це команди в коді, які виконують зумовлені дії і в цьому сенсі мова програмування не сильно відрізняється від людської мови - містить правила та структуру
+Інструкції - це команди в коді, які виконують зумовлені дії і в цьому сенсі мова програмування не сильно відрізняється від людської мови - містить правила та структуру.
 
-Інструкція console.log('привіт!') виводить повідомлення з текстом привіт!
+Інструкція `console.log('привіт!')` виводить повідомлення з текстом "привіт!".
 
-Тут console.log() - це вбудована (заздалегідь визначена) функція
-А 'привіт!' - аргумент цієї функції
+Тут `console.log()` - це вбудована (заздалегідь визначена) функція.
+А 'привіт!' - аргумент цієї функції.
 
 Про функції ми поговоримо через тиждень, а поки що можна сприймати будь-які окремі шматки коду саме як інструкції для машини - команди, зрозумілі і програмісту та комп'ютеру
 (ми спеціально спрощуємо ці поняття у перший тиждень)
 
 </details>
 
-# день 3:
+## День 3:
 
-### Основи git день 1
-https://oil-slug-2e1.notion.site/9aa41a3ea22e4f7889446edf7e218ba3
+### Основи Git - День 1
 
-# день 4:
+[Посилання на матеріали](https://oil-slug-2e1.notion.site/9aa41a3ea22e4f7889446edf7e218ba3)
 
-### Основи git день 2
-https://oil-slug-2e1.notion.site/2e00ce915a864059b947ac81186274c3
+## День 4:
 
-# день 5:
+### Основи Git - День 2
 
-https://uk.javascript.info/comparison
+[Посилання на матеріали](https://oil-slug-2e1.notion.site/2e00ce915a864059b947ac81186274c3)
 
-# день 6:
+## День 5:
 
-https://uk.javascript.info/ifelse
-https://uk.javascript.info/logical-operators
+- [JavaScript Comparison](https://uk.javascript.info/comparison)
 
-# день 7:
+## День 6:
 
-https://uk.javascript.info/function-basics
+- [JavaScript If/Else](https://uk.javascript.info/ifelse)
+- [JavaScript Logical Operators](https://uk.javascript.info/logical-operators)
 
-# день 8:
+## День 7:
 
-https://uk.javascript.info/while-for
+- [JavaScript Function Basics](https://uk.javascript.info/function-basics)
 
-# день 9:
+## День 8:
 
-https://uk.javascript.info/object
+- [JavaScript While/For Loops](https://uk.javascript.info/while-for)
 
-# день 10:
+## День 9:
 
-https://uk.javascript.info/object-copy
+- [JavaScript Object Basics](https://uk.javascript.info/object)
 
-# день 11:
+## День 10:
 
-Практика ToDo (Телеграм прикриплені)
+- [JavaScript Object Copy](https://uk.javascript.info/object-copy)
+
+## День 11:
+
+Практика ToDo (Телеграм прикріплені)
+
+</details>
+
+<details><summary>основи JavaScript 2</summary>
+
+## День 12:
+
+- [arrow-functions-basics](https://uk.javascript.info/arrow-functions-basics)
+- [object-methods this](https://uk.javascript.info/object-methods)
+
+Ваше завдання:
+перепишіть хоча б 3 функції у минулих програмах на стрілочні
+Проаналізувати плюси та мінуси такого підходу
+
+## День 13 Числа:
+
+- [number](https://uk.javascript.info/number)
+- [bigint](https://learn.javascript.ru/bigint)
+
+## День 14 Рядки:
+
+- [string](https://learn.javascript.ru/string)
+- [bigint](https://learn.javascript.ru/bigint)
+
+**задача:**
+
+- Напишіть функцію, яка перетворює отриманий рядок на "вертикальний вигляд" і виводить її в консоль. Щоб вийшло ось так:
+
+```jsx
+showVerticalMessage("strada");
+// S
+// t
+// r
+// a
+// d
+// a
+```
+
+- Якщо рядок починається з літери `s` - потрібно вивести цей рядок з першою великою літерою
+- Якщо рядок більше 7 символів – вивести лише перші 7 символів
+
+## День 15 Масиви:
+
+- [стаття](https://oil-slug-2e1.notion.site/0fbeaa655f1940bab3ca582774f11bf1)
+
+## День 16 Методы масивов:
+
+- [стаття](https://oil-slug-2e1.notion.site/d19851a283d2495897db5bee5044de6b?pvs=4)
+
+## День 17 TODO на массивах:
+
+- [TODO на массивахя](https://oil-slug-2e1.notion.site/TODO-2f179591a47f4ee6ba34073ab431fd63?pvs=4)
+
+## День 18 звіт:
+
+Відкрийте нотатки та запишіть максимально докладно все, що думаєте через пройдений час:
+
+- Встигаєте за основним темпом?
+- самі все вирішуєте чи вам підказують?
+- наскільки все, що відбувається тут, збігається з вашими очікуваннями?
+- готові ось так само ще пів року?
+- все ще хочете стати програмістом?)
+
+А ще, запишіть, чому ви навчилися (стосується тих, хто прийшов без досвіду)
+Просто подивіться скільки всього помістилося за чей час. Попереду ще 5 таких відрізків.
+
+Якщо Роадмап здається вам надто складним, надто швидким або просто надто – напишіть про це в чат.
+
+</details>
