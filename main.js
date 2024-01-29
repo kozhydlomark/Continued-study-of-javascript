@@ -1,7 +1,13 @@
+const STATUS = {
+  TO_DO: "To Do",
+  IN_PROGRESS: "In Progress",
+  DONE: "Done",
+};
+
 const list = {
-  "створити нове практичне завдання": "В процесі",
-  "зробити ліжко": "Зроблено",
-  "написати пост": "Необхідно виконати",
+  "створити нове практичне завдання": STATUS.IN_PROGRESS,
+  "зробити ліжко": STATUS.DONE,
+  "написати пост": STATUS.TO_DO,
 };
 
 function changeStatus(task, status) {
@@ -15,7 +21,7 @@ function changeStatus(task, status) {
 
 function addTask(task) {
   if (!list.hasOwnProperty(task)) {
-    list[task] = "To Do";
+    list[task] = STATUS.TO_DO;
     console.log(`Додано нову задачу "${task}"`);
   } else {
     console.log(`Задача "${task}" вже існує`);
@@ -38,13 +44,13 @@ function showList() {
 
   for (const [task, status] of Object.entries(list)) {
     switch (status) {
-      case "To Do":
+      case STATUS.TO_DO:
         todoTasks.push(task);
         break;
-      case "In Progress":
+      case STATUS.IN_PROGRESS:
         inProgressTasks.push(task);
         break;
-      case "Done":
+      case STATUS.DONE:
         doneTasks.push(task);
         break;
       default:
@@ -63,27 +69,22 @@ function showList() {
   }
 
   console.log("\nDone:");
-  for (const task of doneTasks) {
-    console.log(`"${task}"`);
-  }
-
-  if (
-    todoTasks.length === 0 &&
-    inProgressTasks.length === 0 &&
-    doneTasks.length === 0
-  ) {
-    console.log("Нічого не виконано");
+  if (doneTasks.length > 0) {
+    for (const task of doneTasks) {
+      console.log(`"${task}"`);
+    }
+  } else {
+    console.log("-");
   }
 }
 
 addTask("йти за продуктами");
-changeStatus("написати пост", "Done");
+changeStatus("написати пост", STATUS.DONE);
 deleteTask("зробити ліжко");
-changeStatus("неіснуюче завдання", "To Do");
+changeStatus("неіснуюче завдання", STATUS.TO_DO);
 
 addTask("прочитати книгу");
 addTask("вивчити новий навик");
 addTask("вправи на 30 хвилин");
-
 
 showList();
