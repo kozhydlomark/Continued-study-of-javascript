@@ -96,6 +96,7 @@
 ## День 14 Рядки:
 Перший день:
 - [string](https://learn.javascript.ru/string)
+
 Другий день:
 - [bigint](https://learn.javascript.ru/bigint)
 
