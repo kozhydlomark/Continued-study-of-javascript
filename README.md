@@ -87,13 +87,15 @@
 Проаналізувати плюси та мінуси такого підходу
 
 ## День 13 Числа:
-
+Перший день:
 - [number](https://uk.javascript.info/number)
+Другий день
 - [bigint](https://learn.javascript.ru/bigint)
 
 ## День 14 Рядки:
-
+Перший день:
 - [string](https://learn.javascript.ru/string)
+Другий день:
 - [bigint](https://learn.javascript.ru/bigint)
 
 **задача:**
