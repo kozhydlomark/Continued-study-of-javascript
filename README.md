@@ -89,7 +89,7 @@
 ## День 13 Числа:
 Перший день:
 - [number](https://uk.javascript.info/number)
-Другий день
+/nДругий день
 - [bigint](https://learn.javascript.ru/bigint)
 
 ## День 14 Рядки:
