@@ -114,15 +114,34 @@ func();
 
 // завдання 8
 function inArray(arr) {
-    return function(x) {
-      return arr.includes(x);
-    };
-  }
-  
-  let arr = [1, 2, 3, 4, 5, 6, 7];
-  alert( arr.filter(inArray([1, 2, 10])) ); // 1,2
+  return function (x) {
+    return arr.includes(x);
+  };
+}
+
+let arr = [1, 2, 3, 4, 5, 6, 7];
+alert(arr.filter(inArray([1, 2, 10]))); // 1,2
 
 //Завдання 9
-function byField(fieldName){
-    return (a, b) => a[fieldName] > b[fieldName] ? 1 : -1;
-  }
+function byField(fieldName) {
+  return (a, b) => (a[fieldName] > b[fieldName] ? 1 : -1);
+}
+
+// Додаткове завдання
+
+function createCounter() {
+  let count = 0;
+
+  return function () {
+    count++;
+    return count;
+  };
+}
+let counterA = createCounter();
+let counterB = createCounter();
+
+console.log(counterA()); // 1
+console.log(counterA()); // 2
+console.log(counterA()); // 3
+
+console.log(counterB()); // 1
