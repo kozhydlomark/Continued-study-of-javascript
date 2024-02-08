@@ -155,8 +155,10 @@ showVerticalMessage("strada");
 <details><summary>основи JavaScript 3</summary>
 
 ## День 19 Замикання:
-
+День перший:
 - [Замикання 1](https://uk.javascript.info/closure)
+
+День другий:
 - [Замикання 2](https://developer.mozilla.org/ru/docs/Web/JavaScript/Closures)
 
 ### Ваше завдання:
