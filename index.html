@@ -1,0 +1,267 @@
+<!-- Завдання 1 -->
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <input type="button" id="hider" value="Натисніть, щоб текст зник" />
+
+  <div id="text">Текст</div>
+
+  <script>
+    document.getElementById('hider').onclick = function() {
+      document.getElementById('text').hidden = true;
+    }
+  </script>
+</body>
+</html>
+
+<!-- завдання 2  -->
+
+<input type="button" onclick="this.hidden=true" value="Сховати">
+
+<!-- Завдання 4 -->
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    #field {
+      width: 200px;
+      height: 150px;
+      border: 10px solid black;
+      background-color: #00FF00;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    #ball {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 40px;
+      height: 40px;
+      transition: all 1s;
+    }
+  </style>
+</head>
+
+<body style="height:2000px">
+
+  Натисніть поле, щоб перемістити м’яч.
+  <br>
+
+
+  <div id="field">
+    <img src="https://en.js.cx/clipart/ball.svg" id="ball"> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+  </div>
+
+  <script>
+    field.onclick = function(event) {
+
+      let fieldCoords = this.getBoundingClientRect();
+
+      let ballCoords = {
+        top: event.clientY - fieldCoords.top - field.clientTop - ball.clientHeight / 2,
+        left: event.clientX - fieldCoords.left - field.clientLeft - ball.clientWidth / 2
+      };
+
+
+      if (ballCoords.top < 0) ballCoords.top = 0;
+
+
+      if (ballCoords.left < 0) ballCoords.left = 0;
+
+      if (ballCoords.left + ball.clientWidth > field.clientWidth) {
+        ballCoords.left = field.clientWidth - ball.clientWidth;
+      }
+
+      if (ballCoords.top + ball.clientHeight > field.clientHeight) {
+        ballCoords.top = field.clientHeight - ball.clientHeight;
+      }
+
+      ball.style.left = ballCoords.left + 'px';
+      ball.style.top = ballCoords.top + 'px';
+    }
+  </script>
+
+</body>
+</html>
+
+<!-- Завдання 5 -->
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    .menu ul {
+      margin: 0;
+      list-style: none;
+      padding-left: 20px;
+      display: none;
+    }
+
+    .menu .title {
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .menu .title::before {
+      content: '▶ ';
+      font-size: 80%;
+      color: green;
+    }
+
+    .menu.open .title::before {
+      content: '▼ ';
+    }
+
+    .menu.open ul {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="sweeties" class="menu">
+    <span class="title">Солодощі (тисни на мене)!</span>
+    <ul>
+      <li>Тістечко</li>
+      <li>Пончик</li>
+      <li>Мед</li>
+    </ul>
+
+  </div>
+
+  <script>
+    let menuElem = document.getElementById('sweeties');
+    let titleElem = menuElem.querySelector('.title');
+
+    titleElem.onclick = function() {
+      menuElem.classList.toggle('open');
+    };
+  </script>
+
+</body>
+</html>
+
+<!-- Завдання 6 -->
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <link rel="stylesheet" href="messages.css">
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+  <div>
+    <div class="pane">
+      <h3>Кінь</h3>
+      <p>Кінь є одним із двох підвидів Equus ferus, що існує. Це парнокопитний ссавець, що належить до таксономічної родини Equidae. За останні 45-55 мільйонів років кінь еволюціонував із маленької багатопалої істоти, Eohippus, до великої однопалої тварини сучасності.</p>
+    </div>
+    <div class="pane">
+      <h3>Осел</h3>
+      <p>Ішак або осел (Equus africanus asinus) є одомашненим представником сімейства коней, Equidae. Диким предком осла є африканський дикий осел E. africanus. Осел використовувався як робоча тварина щонайменше 5000 років.</p>
+    </div>
+    <div class="pane">
+      <h3>Кіт</h3>
+      <p>Домашня кішка (лат. Felis catus) -- невеликий, типово пухнастий, хижий ссавець. Їх часто називають домашніми кішками, коли вони проживають з людьми, або просто кішками, коли нема потреби відрізняти їх від інших котячих. Люди часто цінують кішок за товариські стосунки й за їх здатність полювати на шкідників.
+      </p>
+    </div>
+  </div>
+
+
+  <script>
+    let panes = document.querySelectorAll('.pane');
+
+    for(let pane of panes) {
+      pane.insertAdjacentHTML("afterbegin", '<button class="remove-button">[x]</button>');
+      // кнопка стає першим дочірнім елементом pane
+      pane.firstChild.onclick = () => pane.remove();
+    }
+  </script>
+
+</body>
+</html>
+
+<!-- Завдання 7 -->
+
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="carousel" class="carousel">
+    <button class="arrow prev">⇦</button>
+    <div class="gallery">
+      <ul>
+        <li><img src="https://en.js.cx/carousel/1.png"></li>
+        <li><img src="https://en.js.cx/carousel/2.png"></li>
+        <li><img src="https://en.js.cx/carousel/3.png"></li>
+        <li><img src="https://en.js.cx/carousel/4.png"></li>
+        <li><img src="https://en.js.cx/carousel/5.png"></li>
+        <li><img src="https://en.js.cx/carousel/6.png"></li>
+        <li><img src="https://en.js.cx/carousel/7.png"></li>
+        <li><img src="https://en.js.cx/carousel/8.png"></li>
+        <li><img src="https://en.js.cx/carousel/9.png"></li>
+        <li><img src="https://en.js.cx/carousel/10.png"></li>
+      </ul>
+    </div>
+    <button class="arrow next">⇨</button>
+  </div>
+
+  <script>
+    /* цей код позначає картинки, для зручності розробки */
+    let i = 1;
+    for(let li of carousel.querySelectorAll('li')) {
+      li.style.position = 'relative';
+      li.insertAdjacentHTML('beforeend', `<span style="position:absolute;left:0;top:0">${i}</span>`);
+      i++;
+    }
+
+    /* Конфігурація */
+    let width = 130; // ширина зображення
+    let count = 3; // видима кількість зображень
+
+    let list = carousel.querySelector('ul');
+    let listElems = carousel.querySelectorAll('li');
+
+    let position = 0; // початкова позиція каруселі
+
+    carousel.querySelector('.prev').onclick = function() {
+      // зсув ліворуч
+      position += width * count;
+      // останній зсув вліво може бути не на 3, а на 2 або 1 елемент
+      position = Math.min(position, 0)
+      list.style.marginLeft = position + 'px';
+    };
+
+    carousel.querySelector('.next').onclick = function() {
+      // зсув праворуч
+      position -= width * count;
+      // останнє пересування вправо може бути не на 3, а на 2 або 1 елемент
+      position = Math.max(position, -width * (listElems.length - count));
+      list.style.marginLeft = position + 'px';
+    };
+  </script>
+
+</body>
+</html>
