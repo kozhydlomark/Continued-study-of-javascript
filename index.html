@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор</title>
+    <style type="text/css">
+        .calculator {
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.display {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#result {
+    width: 100%;
+    font-size: 16px;
+    text-align: right;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.numbers, .operators, .actions {
+    flex: 1 1 auto;
+}
+
+.button {
+    width: 100%;
+    padding: 5px;
+    margin: 2px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #ddd;
+}
+
+#clear {
+    background-color: #f00;
+    color: #fff;
+}
+
+#equal {
+    background-color: #00f;
+    color: #fff;
+}
+
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+            <input type="text" id="result" readonly>
+        </div>
+        <div class="buttons">
+            <div class="numbers">
+                <button type="button" class="number" data-value="7">7</button>
+                <button type="button" class="number" data-value="8">8</button>
+                <button type="button" class="number" data-value="9">9</button>
+                <button type="button" class="number" data-value="4">4</button>
+                <button type="button" class="number" data-value="5">5</button>
+                <button type="button" class="number" data-value="6">6</button>
+                <button type="button" class="number" data-value="1">1</button>
+                <button type="button" class="number" data-value="2">2</button>
+                <button type="button" class="number" data-value="3">3</button>
+                <button type="button" class="number" data-value="0">0</button>
+            </div>
+            <div class="operators">
+                <button type="button" class="operator" data-value="+">+</button>
+                <button type="button" class="operator" data-value="-">-</button>
+                <button type="button" class="operator" data-value="*">*</button>
+                <button type="button" class="operator" data-value="/">/</button>
+            </div>
+            <div class="actions">
+                <button type="button" id="clear">C</button>
+                <button type="button" id="equal">=</button>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
