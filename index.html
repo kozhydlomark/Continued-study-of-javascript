@@ -4,36 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Калькулятор</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-    }
-    .calculator {
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    input[type="text"] {
-        width: 100px;
-        padding: 5px;
-        margin: 5px;
-    }
-    select {
-        padding: 5px;
-        margin: 5px;
-    }
-    button {
-        padding: 5px 10px;
-        margin: 5px;
-        cursor: pointer;
-    }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="calculator">
@@ -49,32 +20,6 @@
     <input type="text" id="result" readonly>
 </div>
 
-<script>
-    function calculate() {
-        const num1 = parseFloat(document.getElementById('num1').value);
-        const num2 = parseFloat(document.getElementById('num2').value);
-        const operator = document.getElementById('operator').value;
-        let result;
-
-        switch(operator) {
-            case 'add':
-                result = num1 + num2;
-                break;
-            case 'subtract':
-                result = num1 - num2;
-                break;
-            case 'multiply':
-                result = num1 * num2;
-                break;
-            case 'divide':
-                result = num1 / num2;
-                break;
-            default:
-                result = 'Invalid operator';
-        }
-
-        document.getElementById('result').value = result;
-    }
-</script>
+<script src="script.js"></script>
 </body>
 </html>
