@@ -1,0 +1,77 @@
+<input>
+
+<script>
+  let input = document.querySelector('input');
+
+  // атрибут => властивість
+  input.setAttribute('id', 'id');
+  alert(input.id); // id (оновлений)
+
+  // властивість => атрибут
+  input.id = 'newId';
+  alert(input.getAttribute('id')); // newId (оновлений)
+</script>
+
+
+<style>
+  .order[data-order-state="new"] {
+    color: green;
+  }
+
+  .order[data-order-state="pending"] {
+    color: blue;
+  }
+
+  .order[data-order-state="canceled"] {
+    color: red;
+  }
+</style>
+
+<div id="order" class="order" data-order-state="new">
+  A new order.
+</div>
+
+<script>
+  // читання
+  alert(order.dataset.orderState); // new
+
+  // зміна
+  order.dataset.orderState = "pending"; // (*)
+</script>
+
+
+<!-- додаткове завдання -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Зміна кольору фону</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 50px;
+    }
+</style>
+</head>
+<body>
+
+<h1>Зміна кольору фону кожні 2 секунди</h1>
+
+<script>
+const colors = ["red", "blue", "green", "yellow", "orange"];
+
+function changeBackgroundColor() {
+    setInterval(function() {
+        const randomIndex = Math.floor(Math.random() * colors.length);
+        const randomColor = colors[randomIndex];
+        document.body.style.backgroundColor = randomColor;
+    }, 2000);
+}
+
+changeBackgroundColor();
+</script>
+</body>
+</html>
